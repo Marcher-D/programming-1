@@ -1,11 +1,20 @@
-int factorial(int N)
-{
-    // your implementation
+#include <stdio.h>
+
+int factorial(int N);
+
+int main() {
+    int N;
+    scanf("%d",&N);
+    int result=factorial(N);
+    printf("%d",result);
+    return 0;
 }
 
-int main()
-{
-    int N = 10;
-    int ans = factorial(N);
-    return 0; // set break point here to check result
+int factorial(int N) {
+    if (N==0) {
+        return 1;
+    }
+    else {
+        return N*factorial(N-1);
+    }
 }
